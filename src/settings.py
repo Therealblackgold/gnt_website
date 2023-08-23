@@ -1,6 +1,7 @@
 from pathlib import Path
 import os
 from decouple import config
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -71,6 +72,10 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+
+DATABASES["default"] = dj_database_url.parse(
+    "postgres://gnt_website_db_user:ZPi8rmNblZhyDV9UXwvv6fAjbBGntCEQ@dpg-cjiucm7jbvhs73d9m1hg-a.oregon-postgres.render.com/gnt_website_db")
 
 
 # Password validation
