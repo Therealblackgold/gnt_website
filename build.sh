@@ -7,4 +7,4 @@ python manage.py migrate
 
 
 # Run Collect Static
-python manage.py collectstatic
+yes | python manage.py collectstatic
