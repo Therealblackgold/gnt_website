@@ -1,0 +1,168 @@
+{% load static %}
+<style>
+  img {
+    width: 100%;
+  }
+  /* .header {
+    position: relative;
+    text-align: center;
+    color: white;
+    background: linear-gradient(
+      60deg,
+      rgb(177, 58, 58) 0%,
+      rgb(231, 114, 31) 100%
+    );
+  } */
+
+  .header {
+    position: relative;
+    text-align: center;
+    color: white;
+
+    background: linear-gradient(rgba(0, 0, 0, 0.803), rgba(0, 0, 0, 0.798)),
+      url("{% static 'img/black-bg.jpg' %}");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  /* Inner header */
+
+  .inner-header {
+    padding: 50px 20px;
+  }
+
+  .inner-header h1 {
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .flex {
+    /* Flex container */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Waves */
+
+  .waves {
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    margin-bottom: -7px;
+  }
+
+  .content {
+    position: relative;
+    height: 20vh;
+    text-align: center;
+    background: white;
+  }
+
+  /* ANimation */
+  .parallax > use {
+    animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+  }
+
+  .parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+  }
+
+  .parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+  }
+
+  .parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+  }
+
+  .parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+  }
+
+  @keyframes move-forever {
+    0% {
+      transform: translate3d(-90px, 0, 0);
+    }
+
+    100% {
+      transform: translate3d(85px, 0, 0);
+    }
+  }
+</style>
+
+<!-- HEADER -->
+<div class="header">
+  <!-- Content before waves -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 mx-auto text-center inner-header mt-5">
+        <img
+          class="img-fluid"
+          src="{% static 'img/GNT-WHITE.png' %}"
+          alt=""
+          style="width: 15rem"
+        />
+        <h1>
+          welcome to <br />
+          <span>GNT TECHNOLOGY</span>
+        </h1>
+        <p class="lead d-none d-sm-flex">
+          Your Gateway to Innovation and Transformation. We specialize in
+          crafting tailored solutions that propel businesses into the digital
+          age. Explore our services, driven by experts in software development,
+          digital marketing, and data analytics. Join us to unlock new horizons.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- WAVE CONTAINER -->
+  <div>
+    <svg
+      class="waves"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 24 150 28"
+      preserveAspectRatio="none"
+      shape-rendering="auto"
+    >
+      <defs>
+        <path
+          id="gentle-wave"
+          d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+        />
+      </defs>
+      <g class="parallax">
+        <use
+          xlink:href="#gentle-wave"
+          x="48"
+          y="0"
+          fill="rgba(255,255,255,0.7)"
+        />
+        <use
+          xlink:href="#gentle-wave"
+          x="48"
+          y="3"
+          fill="rgba(255,255,255,0.5)"
+        />
+        <use
+          xlink:href="#gentle-wave"
+          x="48"
+          y="5"
+          fill="rgba(255,255,255,0.3)"
+        />
+        <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+      </g>
+    </svg>
+  </div>
+  <!-- Waves end -->
+</div>

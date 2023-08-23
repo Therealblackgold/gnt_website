@@ -1,0 +1,210 @@
+{% load static %}
+
+<style>
+  .questions {
+    background: url("{% static 'img/white-bg.jpg' %}");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .questions i {
+    font-size: 20px;
+  }
+</style>
+
+<section class="questions" id="questions">
+  <div class="container">
+    <div class="row g-5">
+      <!-- Col 1 -->
+      <div class="col-md-12 col-lg-6">
+        <img
+          src="{% static 'img/gnt-ipdad-1.png' %}"
+          alt="FAQ GNT Technology"
+          class="img-fluid"
+        />
+      </div>
+
+      <!-- Col 2 -->
+      <div class="col-md-12 col-lg-6">
+        <div class="section-title">
+          <h5 class="sub-title">why gnt technology?</h5>
+          <h2>Why <span>work with</span> us</h2>
+        </div>
+
+        <!-- Accordion -->
+        <div class="accordion accordion-flush mt-5" id="accordionFlushExample">
+          <!-- ITEM 1 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOne"
+                aria-expanded="false"
+                aria-controls="flush-collapseOne"
+              >
+                <i class="bi bi-check-lg mx-2"></i>
+                Expertise That Matters
+              </button>
+            </h2>
+            <div
+              id="flush-collapseOne"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                GNT Technology brings a wealth of experience and expertise to
+                the table. Our team consists of seasoned professionals who have
+                a deep understanding of web development, ensuring that your
+                project is in capable hands.
+              </div>
+            </div>
+          </div>
+          <!-- ITEM 2 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseTwo"
+                aria-expanded="false"
+                aria-controls="flush-collapseTwo"
+              >
+                <i class="bi bi-check-lg mx-2"></i>
+                Tailored Solutions
+              </button>
+            </h2>
+            <div
+              id="flush-collapseTwo"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                We understand that every business is unique. That's why we take
+                the time to understand your specific needs and goals, crafting
+                customized solutions that align perfectly with your vision.
+              </div>
+            </div>
+          </div>
+          <!-- ITEM 3 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseThree"
+                aria-expanded="false"
+                aria-controls="flush-collapseThree"
+              >
+                <i class="bi bi-check-lg mx-2"></i>
+                Transparent Collaboration
+              </button>
+            </h2>
+            <div
+              id="flush-collapseThree"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                Communication is at the core of our approach. We believe in
+                transparent collaboration, keeping you informed at every step of
+                the journey, from concept to execution.
+              </div>
+            </div>
+          </div>
+
+          <!-- ITEM 4 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseFour"
+                aria-expanded="false"
+                aria-controls="flush-collapseFour"
+              >
+                <i class="bi bi-check-lg mx-2"></i>
+                Reliability Matters
+              </button>
+            </h2>
+            <div
+              id="flush-collapseFour"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                With GNT Technology, you can count on us to deliver on our
+                promises. Timely project delivery, consistent quality, and a
+                commitment to excellence are what set us apart.
+              </div>
+            </div>
+          </div>
+
+          <!-- ITEM 5 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseFive"
+                aria-expanded="false"
+                aria-controls="flush-collapseFive"
+              >
+                <i class="bi bi-check-lg mx-2"></i>
+                End-to-End Services
+              </button>
+            </h2>
+            <div
+              id="flush-collapseFive"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                From ideation to launch and beyond, we offer comprehensive
+                services that cover the entire lifecycle of your digital
+                projects. This holistic approach means you can rely on us for
+                all your web development needs.
+              </div>
+            </div>
+          </div>
+
+          <!-- ITEM 6 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseSix"
+                aria-expanded="false"
+                aria-controls="flush-collapseSix"
+              >
+                <i class="bi bi-check-lg mx-2"></i>
+                Innovation at Heart
+              </button>
+            </h2>
+            <div
+              id="flush-collapseSix"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                In the rapidly evolving digital landscape, innovation is key. We
+                thrive on pushing boundaries, exploring the latest technologies,
+                and integrating them into your projects to give you a
+                competitive edge.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a href="#" class="btn btn-primary mt-5">start now</a>
+      </div>
+    </div>
+  </div>
+</section>

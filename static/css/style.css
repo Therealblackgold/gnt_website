@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+
+:root {
+  --PRIMARY-COLOR: #db7c2e;
+  --GRAY-BG: #f2f2f4;
+  --BLACK-COLOR: #111111;
+  --LIGHT-COLOR: #eff2f5;
+  --BLUE-STRONG: #010c2a;
+  --BG-COLOR: radial-gradient(circle, #db7c2e, #b36423);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding: 75px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+  background-color: #fff;
+  font-size: 16px;
+}
+
+.bg-nav-dark {
+  background-color: #161515 !important;
+}
+
+.navbar {
+  /* background-color: #161515; */
+  /* background: #040404; */
+  font-weight: 700;
+  z-index: 999;
+}
+
+.navbar-brand {
+  font-weight: 700;
+}
+
+.navbar-brand span {
+  color: var(--PRIMARY-COLOR);
+}
+
+span {
+  color: var(--PRIMARY-COLOR);
+}
+
+p span {
+  font-weight: 800;
+}
+
+i {
+  color: var(--PRIMARY-COLOR);
+}
+
+.btn {
+  text-transform: uppercase;
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.btn-primary {
+  background-color: var(--PRIMARY-COLOR);
+  border: var(--PRIMARY-COLOR);
+}
+
+.btn-primary:hover {
+  background-color: var(--BLACK-COLOR);
+  color: var(--PRIMARY-COLOR);
+}
+
+.btn-outline-primary {
+  color: var(--PRIMARY-COLOR);
+  border: 1px solid var(--PRIMARY-COLOR);
+}
+
+.btn-dark {
+  background-color: var(--BLACK-COLOR);
+}
+
+.btn-light {
+  background-color: var(--LIGHT-COLOR);
+  border-radius: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn-light i {
+  font-size: 20px;
+}
+
+.btn-dark i {
+  color: var(--LIGHT-COLOR);
+}
+
+.sub-title {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #a1a1a1;
+}
+
+section {
+  padding: 8rem 5px;
+}
+
+.section-title h2 {
+  font-weight: 800;
+}
+
+@media only screen and (max-width: 991px) {
+  .navbar-collapse {
+    background: var(--BLACK-COLOR);
+  }
+}

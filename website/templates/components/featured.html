@@ -1,0 +1,147 @@
+{% load static %}
+<style>
+  .featured {
+    background: url("{% static 'img/white-bg.jpg' %}");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 5rem;
+  }
+  .featured .image {
+    background: var(--PRIMARY-COLOR);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .featured img {
+    width: 2.5rem;
+  }
+
+  .featured h3 {
+    font-size: 18px;
+    margin-top: 1rem;
+  }
+</style>
+
+<section class="featured" id="featured">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 mx-auto mb-5">
+        <div class="section-title text-center">
+          <h5 class="sub-title">focus on full innovation</h5>
+          <h2>Empowering Your<span> Digital Evolution</span></h2>
+          <p>
+            <span>GNT Technology</span> is dedicated to propelling your business
+            forward with innovation and technology at its core.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cards -->
+    <div class="row g-4 text-center mb-4">
+      <!-- Item 1 -->
+      <div class="col-md">
+        <div class="image mx-auto">
+          <img
+            src="{% static 'img/icons/monitor.png' %}"
+            alt=""
+            class="img-fluid"
+          />
+        </div>
+        <h3>Analytics</h3>
+        <p>
+          Elevate insights with our tailored analytics. Unveil trends, enhance
+          decisions, and drive growth in your software development journey.
+        </p>
+      </div>
+      <!-- Item 2 -->
+      <div class="col-md">
+        <div class="image mx-auto">
+          <img
+            src="{% static 'img/icons/innovation.png' %}"
+            alt=""
+            class="img-fluid"
+          />
+        </div>
+        <h3>Innovation</h3>
+        <p>
+          Drive progress through continuous innovation. Foster creativity,
+          implement novel ideas, and lead positive change for sustained growth.
+        </p>
+      </div>
+      <!-- Item 3 -->
+      <div class="col-md">
+        <div class="image mx-auto">
+          <img
+            src="{% static 'img/icons/digital-marketing.png' %}"
+            alt=""
+            class="img-fluid"
+          />
+        </div>
+        <h3>Digital marketing</h3>
+        <p>
+          Refine strategies with our precise digital marketing analytics.
+          Uncover trends, optimize campaigns, and boost online success
+          effectively.
+        </p>
+      </div>
+    </div>
+
+    <!-- PART 2 -->
+    <div class="row g-4 text-center">
+      <!-- Item 1 -->
+      <div class="col-md">
+        <div class="image mx-auto">
+          <img
+            src="{% static 'img/icons/web-page.png' %}"
+            alt=""
+            class="img-fluid"
+          />
+        </div>
+        <h3>Seo & Optimization</h3>
+        <p>
+          Enhance visibility and rankings through expert SEO optimization.
+          Elevate online presence, attract traffic, and surpass competition
+          effectively.
+        </p>
+      </div>
+      <!-- Item 2 -->
+      <div class="col-md">
+        <div class="image mx-auto">
+          <img
+            src="{% static 'img/icons/secure-data.png' %}"
+            alt=""
+            class="img-fluid"
+          />
+        </div>
+        <h3>Data Security</h3>
+        <p>
+          Safeguard sensitive information with robust data security. Mitigate
+          risks, protect privacy, and ensure trust in digital operations
+          confidently.
+        </p>
+      </div>
+      <!-- Item 3 -->
+      <div class="col-md">
+        <div class="image mx-auto">
+          <img
+            src="{% static 'img/icons/email.png' %}"
+            alt=""
+            class="img-fluid"
+          />
+        </div>
+        <h3>Email Marketing</h3>
+        <p>
+          Maximize engagement with targeted email marketing. Reach audiences
+          effectively, nurture relationships, and achieve marketing goals
+          through personalized communication.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

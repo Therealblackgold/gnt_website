@@ -1,0 +1,50 @@
+{% load static %}
+
+<style>
+  .video {
+    background: linear-gradient(
+        rgba(29, 27, 27, 0.856),
+        rgba(17, 15, 15, 0.719)
+      ),
+      url("{% static 'img/video.jpg' %}");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 3rem;
+  }
+
+  .video h2 {
+    font-weight: 700;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-size: 25px;
+  }
+
+  .video h3 {
+    font-size: 20px;
+  }
+
+  .video i {
+    font-size: 55px;
+    color: var(--PRIMARY-COLOR);
+  }
+</style>
+
+<section class="video px-3">
+  <div class="row">
+    <div class="col-md-6 mx-auto text-center">
+      <p>
+        Experience GNT Technology in action through our video showcase. Discover
+        our innovative solutions, witness successful projects, and catch a
+        glimpse of the transformative impact we bring to businesses. From
+        seamless software interfaces to dynamic marketing campaigns, our videos
+        illustrate the depth of our expertise and commitment to excellence. Join
+        us on a visual journey that highlights the power of technology-driven
+        growth with GNT Technology.
+      </p>
+      <i class="bi bi-play-circle-fill"></i>
+      <h3>Watch Intro</h3>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,163 @@
+{% load static %}
+
+<style>
+  .contact {
+    background: linear-gradient(rgba(0, 0, 0, 0.803), rgba(0, 0, 0, 0.684)),
+      url("{% static 'img/black-bg.jpg' %}");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+  }
+
+  .contact .contact-cards img {
+    background: var(--PRIMARY-COLOR);
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50%;
+  }
+
+  .contact .contact-cards i {
+    background: var(--PRIMARY-COLOR);
+    color: var(--BLACK-COLOR);
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact .contact-cards a {
+    font-weight: 800;
+    color: var(--BLACK-COLOR);
+    text-decoration: none;
+  }
+
+  .contact-form {
+    margin-top: 5rem;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    border: 1px solid transparent;
+    background: #fff;
+    border-radius: 0;
+  }
+
+  .contact-form ::placeholder {
+    color: rgba(128, 128, 128, 0.773);
+  }
+</style>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <!-- SECTION HEADER -->
+    <div class="row">
+      <div class="col-md-10 mx-auto mb-5">
+        <div class="section-title text-center">
+          <h5 class="sub-title">Contact</h5>
+          <h2>Contact <span>us</span></h2>
+          <p>
+            We're here to assist you at GNT Technology. Whether you have
+            questions about our services, want to discuss potential
+            collaborations, or need support for ongoing projects, our dedicated
+            team is just a message away. Feel free to reach out via the provided
+            contact information, and we'll be delighted to connect with you.
+            Your inquiries are important to us, and we look forward to hearing
+            from you soon.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4 contact-cards">
+      <!-- ITEM 1-->
+      <div class="col-md">
+        <div class="card text-center mx-auto shadow">
+          <i class="bi bi-telephone-forward h2 mx-auto mt-3"></i>
+          <div class="card-body">
+            <h5 class="card-title">Telephone</h5>
+            <a href="#">073 654 900</a>
+          </div>
+        </div>
+      </div>
+      <!-- ITEM 2-->
+      <div class="col-md">
+        <div class="card text-center mx-auto shadow">
+          <i class="bi bi-envelope h2 mx-auto mt-3"></i>
+          <div class="card-body">
+            <h5 class="card-title">Mail Address</h5>
+            <a href="#">info@gnttechnology</a>
+          </div>
+        </div>
+      </div>
+      <!-- ITEM 3-->
+      <div class="col-md">
+        <div class="card text-center mx-auto shadow">
+          <i class="bi bi-geo-alt h2 mx-auto mt-3"></i>
+          <div class="card-body">
+            <h5 class="card-title">Location</h5>
+            <a href="#">Johannesburg</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-8 mx-auto">
+        <form method="POST" action="{% url 'home' %}" class="contact-form">
+          {% csrf_token %}
+          <div class="row mb-3">
+            <div class="col-sm-6">
+              <input
+                type="text"
+                name="name"
+                class="form-control"
+                placeholder="Your Name"
+              />
+            </div>
+            <div class="col-sm-6">
+              <input
+                type="email"
+                name="email"
+                class="form-control"
+                placeholder="Your Email"
+              />
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col-sm-6">
+              <input
+                type="text"
+                name="number"
+                class="form-control"
+                placeholder="Your Number"
+              />
+            </div>
+            <div class="col-sm-6">
+              <input
+                type="text"
+                name="subject"
+                class="form-control"
+                placeholder="Subject"
+              />
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <textarea
+              name="message"
+              class="form-control"
+              rows="3"
+              placeholder="Write A Message"
+            ></textarea>
+          </div>
+          <div class="d-flex align-items-center justify-content-center m-5">
+            <button class="btn btn-primary" type="submit">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

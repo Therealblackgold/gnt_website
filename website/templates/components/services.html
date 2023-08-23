@@ -1,0 +1,142 @@
+{% load static %}
+
+<style>
+  /* .services {
+    background: url("{% static 'img/white-bg.jpg' %}");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 5rem;
+  } */
+  .services .owl-dot.active span {
+    width: 30px;
+    background: var(--PRIMARY-COLOR) !important;
+  }
+
+  .services .owl-dot:hover span {
+    background: var(--PRIMARY-COLOR) !important;
+  }
+
+  .services .owl-nav i {
+    background: var(--BLACK-COLOR);
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .services .owl-nav i:hover {
+    background: var(--PRIMARY-COLOR);
+    color: var(--LIGHT-COLOR);
+  }
+
+  .services .owl-prev,
+  .services .owl-next {
+    position: absolute;
+    top: 30%;
+  }
+
+  .services .owl-prev {
+    left: 0;
+  }
+  .services .owl-next {
+    right: 0;
+  }
+
+  .services .item .card {
+    border-radius: 1rem;
+    min-height: 29rem;
+    /* background: url("{% static 'img/1165241_122.jpeg' %}");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; */
+  }
+
+  .services h5 {
+    font-size: 16px;
+  }
+
+  .services p {
+    font-size: 16px;
+    color: #4c4d56;
+    margin-top: 20px;
+  }
+
+  .services i {
+    color: var(--PRIMARY-COLOR);
+    font-size: 30px;
+  }
+
+  .services .image-wrapper {
+    background: var(--GRAY-BG);
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .services img {
+    width: 8rem;
+  }
+</style>
+
+<section class="services" id="services">
+  <!-- SERVICES CONTENT -->
+  <div class="container">
+    <!-- SERVICES HEADING -->
+    <div class="row">
+      <div class="col-md-10 mx-auto">
+        <div class="section-title text-center">
+          <h5 class="sub-title">services</h5>
+          <h2>We focus on <span>technology</span></h2>
+          <p>
+            At <span>GNT Technology</span>, we pride ourselves on delivering a
+            diverse range of cutting-edge services that empower businesses to
+            thrive in the digital age. Our expertise spans across software
+            development, digital marketing, and data analytics. Through our
+            software development solutions, we create customized applications
+            that cater to your unique needs, ensuring seamless user experiences
+            and optimal functionality.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row pt-3">
+      <!-- OWL CAROUSEL CLASSES -->
+      <div class="owl-carousel owl-theme">
+        {% for service in services %}
+        <!-- SERVICES CARD ITEM -->
+        <div class="item mb-4">
+          <div class="card shadow justify-content-center align-items-center">
+            <div class="image-wrapper">
+              <img
+                class="card-img-top w-50"
+                src="{{service.image.url}}"
+                alt="GNT Technology Services"
+              />
+            </div>
+            <div class="card-body text-center">
+              <p class="card-text border-top pt-3">
+                {{service.description|truncatewords:25}}
+              </p>
+              <div class="card-title">
+                <a href="{% url 'service' service.id %}" class="btn btn-light">
+                  {{service.service|title}}<i
+                    class="bi bi-arrow-right-circle-fill"
+                  ></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

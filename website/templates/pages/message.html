@@ -1,0 +1,154 @@
+<!-- divider  -->
+{% load static %}
+<!-- divider  -->
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GNT Technology</title>
+
+    <!-- ======= Bootstrap CSS ======= -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <!-- ======= Bootstrap Icons CDN ======= -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+
+    <!-- ======= Custom CSS ======= -->
+    <link rel="stylesheet" href="{% static '/css/style.css' %}" />
+  </head>
+
+  <!-- ======= Page styles  ======= -->
+  <style>
+    body::before {
+      display: block;
+      content: "";
+      height: 60px;
+    }
+
+    nav.bg-dark {
+      background: var(--BLACK-COLOR) !important;
+    }
+
+    .service-hero {
+      background: linear-gradient(
+          rgba(29, 27, 27, 0.856),
+          rgba(17, 15, 15, 0.719)
+        ),
+        url("{% static 'img/video.jpg' %}");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      color: #fff;
+      height: 20vh;
+    }
+
+    .service {
+      min-height: 60vh;
+      margin-top: 25px;
+      padding-top: 0;
+    }
+
+    h2 {
+      color: var(--PRIMARY-COLOR);
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .body-content {
+      flex: 1;
+    }
+
+    .footer {
+      margin-top: auto;
+    }
+  </style>
+
+  <body>
+    <!-- ======= Navbar  ======= -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3 fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'home' %}">
+          <span>GNT </span>TECHNOLOGY
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="{% url 'home' %}"
+                >Home</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ======= Content  ======= -->
+    <div class="service-hero"></div>
+
+    <section class="service">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 mx-auto text-center">
+            <img
+              src="{% static '/img/GNT-LOGO.png' %}"
+              alt=""
+              class="img-fluid mb-3"
+              style="width: 15rem"
+            />
+            {% if name %}
+            <center>
+              <h3>Thank you {{ name }}!</h3>
+              <br />We received your email and will contact you shortly...
+            </center>
+            {% else %}
+            <center>
+              <h3>Thanks you</h3>
+              <br />We received your email and will contact you shortly...
+            </center>
+            {% endif %}
+            <a href="{% url 'home' %}" class="btn btn-primary">home</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ======= Footer  ======= -->
+    {% include 'partials/footer.html' %}
+
+    <!-- ====== BOOTSTRAP JS ====== -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
+
+{% endblock content %}

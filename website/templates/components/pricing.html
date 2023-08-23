@@ -1,0 +1,478 @@
+{% load static %}
+<!-- ===== PRICING STYLES ===== -->
+<style>
+  .pricing {
+    background: url("{% static 'img/white-bg.jpg' %}");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .pricing .card {
+    background-color: #fff;
+    border-radius: 2rem;
+  }
+
+  .pricing .card-header {
+    border-radius: 2rem 2rem 0 0;
+    background-color: #fff;
+  }
+
+  .pricing li {
+    border-bottom: 1px solid #22222228;
+    line-height: 2rem;
+  }
+
+  .pricing .btn-dark {
+    background-color: var(--PRIMARY-COLOR);
+    border-radius: 2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.2s ease;
+  }
+
+  .pricing .nav-tabs {
+    background: var(--BLACK-COLOR);
+    border-radius: 2rem;
+  }
+
+  .pricing .btn-dark:hover {
+    background-color: #222;
+    border: 1px solid #222;
+  }
+
+  .pricing .tab-btn.active {
+    background: var(--PRIMARY-COLOR);
+    border: 1px solid var(--PRIMARY-COLOR);
+  }
+
+  .pricing .tab-btn {
+    color: var(--LIGHT-COLOR);
+    border-radius: 2rem;
+  }
+</style>
+
+<!-- ===== PRICING START ===== -->
+<section class="pricing" id="pricing">
+  <!-- ===== PRICING NAVIGATION ===== -->
+  <div class="container">
+    <ul class="nav nav-tabs p-1 p-md-2" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link tab-btn active"
+          id="home-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#home-tab-pane"
+          type="button"
+          role="tab"
+          aria-controls="home-tab-pane"
+          aria-selected="true"
+        >
+          Web Design
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link tab-btn"
+          id="profile-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#profile-tab-pane"
+          type="button"
+          role="tab"
+          aria-controls="profile-tab-pane"
+          aria-selected="false"
+        >
+          Business
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link tab-btn"
+          id="contact-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#contact-tab-pane"
+          type="button"
+          role="tab"
+          aria-controls="contact-tab-pane"
+          aria-selected="false"
+        >
+          Hosting
+        </button>
+      </li>
+    </ul>
+
+    <!-- ===== TAB CONTENT ===== -->
+    <div class="tab-content mt-5" id="myTabContent">
+      <!-- ===== WEBSITE DESIGN PRICING ===== -->
+      <div
+        class="tab-pane fade show active"
+        id="home-tab-pane"
+        role="tabpanel"
+        aria-labelledby="home-tab"
+        tabindex="0"
+      >
+        <!-- ===== SECTION HEADING ===== -->
+        <div class="row">
+          <div class="col-md-10 mx-auto mb-5">
+            <div class="section-title text-center">
+              <h5 class="sub-title">pricing</h5>
+              <h2>Website Design <span>packages</span></h2>
+              <p>
+                <span>GNT Technology</span> is a dynamic leader in delivering
+                innovative solutions. With expertise ranging from software
+                development and digital marketing to data analytics, we empower
+                businesses to excel in the modern digital landscape. Feel free
+                to contact us to help you choose the best package for your
+                needs.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-3 mb-5 text-center">
+          <!-- CARD 1 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card mb-4 shadow">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Web-Silver</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">R3000</h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>5 Page Website Design</li>
+                  <li>12 Month Starter Hosting</li>
+                  <li>Free Domain Registration</li>
+                  <li>10 x Email Accounts</li>
+                  <li>Free SSL Certificate</li>
+                  <li>cPanel Control Panel</li>
+                </ul>
+                <button type="button" class="w-100 btn btn-lg btn-light">
+                  R3000 once off <i class="bi bi-cart-check-fill"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 2 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card mb-4 shadow">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Web-Gold</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">R4000</h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>10 Page Website Design</li>
+                  <li>12 Month Starter Hosting</li>
+                  <li>Free Domain Registration</li>
+                  <li>10 x Email Accounts</li>
+                  <li>Free SSL Certificate</li>
+                  <li>cPanel Control Panel</li>
+                </ul>
+                <button type="button" class="w-100 btn btn-lg btn-light">
+                  R4000 once off<i class="bi bi-cart-check-fill"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 3 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card mb-4 shadow">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Web-Platinum</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">R5000</h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>15 Page Website Design</li>
+                  <li>12 Month Starter Hosting</li>
+                  <li>Free Domain Registration</li>
+                  <li>75 x Email Accounts</li>
+                  <li>Free SSL Certificate</li>
+                  <li>cPanel Control Panel</li>
+                </ul>
+                <button type="button" class="w-100 btn btn-lg btn-light">
+                  R5000 once off<i class="bi bi-cart-check-fill"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 4 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card mb-4 shadow">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">E-commerce</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">
+                  R5500<small class="text-body-secondary fw-light">/POA</small>
+                </h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>5 Page Website Design</li>
+                  <li>20 Shop Products</li>
+                  <li>Payfast Integration</li>
+                  <li>75 x Email Accounts</li>
+                  <li>Free Domain Registration</li>
+                  <li>Free SSL Certificate</li>
+                </ul>
+                <button type="button" class="w-100 btn btn-lg btn-light">
+                  R5500 once off<i class="bi bi-cart-check-fill"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ===== BUSINESS, WEBSITE DESIGN ===== -->
+      <div
+        class="tab-pane fade"
+        id="profile-tab-pane"
+        role="tabpanel"
+        aria-labelledby="profile-tab"
+        tabindex="0"
+      >
+        <!-- ===== SECTION HEADING ===== -->
+        <div class="row">
+          <div class="col-md-10 mx-auto mb-5">
+            <div class="section-title text-center">
+              <h5 class="sub-title">pricing</h5>
+              <h2>Business <span>packages</span></h2>
+              <p>
+                <span>GNT Technology</span> is a dynamic leader in delivering
+                innovative solutions. With expertise ranging from software
+                development and digital marketing to data analytics, we empower
+                businesses to excel in the modern digital landscape. Feel free
+                to contact us to help you choose the best package for your
+                needs.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+          <!-- CARD 1 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card mb-4 shadow">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Biz-Starter</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">R550</h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>CIPC Registration</li>
+                  <li>BEE Certificate</li>
+                  <li>Share Certificate</li>
+                  <li>Tax Clearance</li>
+                  <li>.....</li>
+                  <li>.....</li>
+                </ul>
+                <button type="button" class="w-100 btn btn-lg btn-light">
+                  R550 once off <i class="bi bi-cart-check-fill"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 2 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card mb-4 shadow">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Biz-Silver</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">R850</h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>CIPC Registration</li>
+                  <li>BEE Certificate</li>
+                  <li>Share Certificate</li>
+                  <li>Tax Clearance</li>
+                  <li>CSD Registration</li>
+                  <li>.....</li>
+                </ul>
+                <button type="button" class="w-100 btn btn-lg btn-light">
+                  R850 once off <i class="bi bi-cart-check-fill"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- CARD 3 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card mb-4 shadow">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Biz-Gold</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">R1600</h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>CIPC Registration</li>
+                  <li>BEE Certificate</li>
+                  <li>Share Certificate</li>
+                  <li>Tax Clearance</li>
+                  <li>CSD Registration</li>
+                  <li>CIDB Registration (1 Grad)</li>
+                </ul>
+                <button type="button" class="w-100 btn btn-lg btn-light">
+                  R1600 once off <i class="bi bi-cart-check-fill"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- CARD 4 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card mb-4 shadow">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Biz-Platinum</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">R2000</h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>CIPC Registration</li>
+                  <li>BEE Certificate</li>
+                  <li>Share Certificate</li>
+                  <li>Tax Clearance</li>
+                  <li>CSD + CIDB Registration</li>
+                  <li>Business Profile + Professional Email</li>
+                </ul>
+                <button type="button" class="w-100 btn btn-lg btn-light">
+                  R2000 once off<i class="bi bi-cart-check-fill"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ===== HOSTING PACKAGES ===== -->
+      <div
+        class="tab-pane fade"
+        id="contact-tab-pane"
+        role="tabpanel"
+        aria-labelledby="contact-tab"
+        tabindex="0"
+      >
+        <!-- ===== SECTION HEADING ===== -->
+        <div class="row">
+          <div class="col-md-10 mx-auto mb-5">
+            <div class="section-title text-center">
+              <h5 class="sub-title">pricing</h5>
+              <h2>Web & Email Hosting <span>packages</span></h2>
+              <p>
+                <span>GNT Technology</span> is a dynamic leader in delivering
+                innovative solutions. With expertise ranging from software
+                development and digital marketing to data analytics, we empower
+                businesses to excel in the modern digital landscape. Feel free
+                to contact us to help you choose the best package for your
+                needs.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+          <!-- CARD 1 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card mb-4 shadow">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Hosting-Starter</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">R80</h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>5GB Storage Space</li>
+                  <li>Unlimited Bandwidth</li>
+                  <li>Host 1 Website</li>
+                  <li>1 MySQL Database</li>
+                  <li>5 Email Accounts</li>
+                  <li>Free SSL</li>
+                  <li>cPanel Control Panel</li>
+                  <li>24/7 Support</li>
+                </ul>
+                <button type="button" class="w-100 btn btn-lg btn-light">
+                  R80 Per Month <i class="bi bi-cart-check-fill"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 2 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card mb-4 shadow">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Hosting-Silver</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">R150</h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>2GB Storage Space</li>
+                  <li>Unlimited Bandwidth</li>
+                  <li>Host 5 Website</li>
+                  <li>5 MySQL Database</li>
+                  <li>75 Email Accounts</li>
+                  <li>Free SSL</li>
+                  <li>cPanel Control Panel</li>
+                  <li>24/7 Support</li>
+                </ul>
+                <button type="button" class="w-100 btn btn-lg btn-light">
+                  R150 Per Month <i class="bi bi-cart-check-fill"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 3 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card mb-4 shadow">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Hosting-Gold</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">R300</h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>10GB Storage Space</li>
+                  <li>Unlimited Bandwidth</li>
+                  <li>Host Unlimited Websites</li>
+                  <li>Unlimited MySQL Database</li>
+                  <li>Unlimited Email Accounts</li>
+                  <li>Free SSL</li>
+                  <li>cPanel Control Panel</li>
+                  <li>24/7 Support</li>
+                </ul>
+                <button type="button" class="w-100 btn btn-lg btn-light">
+                  R300 Per Month <i class="bi bi-cart-check-fill"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 4 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card mb-4 shadow">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Hosting-Platinum</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">R400</h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>20GB Storage Space</li>
+                  <li>Unlimited Bandwidth</li>
+                  <li>Host Unlimited Website</li>
+                  <li>Unlimited MySQL Database</li>
+                  <li>Unlimited Email Accounts</li>
+                  <li>Free SSL</li>
+                  <li>cPanel Control Panel</li>
+                  <li>24/7 Support</li>
+                </ul>
+                <button type="button" class="w-100 btn btn-lg btn-light">
+                  R400 Per Month <i class="bi bi-cart-check-fill"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
